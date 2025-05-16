@@ -31,7 +31,7 @@ function createBooksRows(books) {
             let tr = document.createElement("tr");
 
             let br = document.createElement("td");
-            br.textContent = books[i].id;
+            br.textContent = i+1;
 
             let name = document.createElement("td");
             name.textContent = books[i].name;
@@ -69,7 +69,7 @@ function addBook(books) {
     const id = maxID(books);
 
     if (name && description && printDate && url && stars && id) {
-      let newBook = new Book(id, name, printDate, url, stars);
+      let newBook = new Book(id, name, printDate, url, description, stars);
       books.push(newBook);
       localStorage.setItem("books", JSON.stringify(books));
       createBooksRows(books);
@@ -80,9 +80,9 @@ function addBook(books) {
 }
 
 function maxID(books) {
-  let id = 1;
+  let id = 0;
   for (let i = 0; i < books.length; i++) {
-    if (id <= books[i].id) {
+    if (id < books[i].id) {
       id++;
     }
   }

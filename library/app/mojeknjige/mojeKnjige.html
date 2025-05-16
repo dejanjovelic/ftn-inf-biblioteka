@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../dist/mojeknjige/mojeKnjige.css">
-    </head>
-    <body>
-        <nav class="navbar">
-            <h1 href="index.html" class="title">OnlineLib</h1>
-            <ul class="nav-links">
-                <li><a href="../contact/contact.html">Kontakt</a></li>
-                <li><b>Moje knjige</b></li>
-                <li><a href="../pregledKnjiga/pregledKnjiga.html">Pregled knjiga</a></li>
-            </ul>
-        </nav>
-        <div class="container-tables">
-            <table id="rented">
 
-            </table>
-            <table id="available">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/mojeknjige/mojeKnjige.css">
+</head>
 
-            </table>
+<body>
+    <nav class="navbar">
+        <h1 href="index.html" class="title">OnlineLib</h1>
+        <ul class="nav-links">
+            <li><a href="../contact/contact.html">Kontakt</a></li>
+            <li><b>Moje knjige</b></li>
+            <li><a href="../pregledKnjiga/pregledKnjiga.html">Pregled knjiga</a></li>
+        </ul>
+    </nav>
+    <div class="container-tables">
+        <table id="rented">
+            <thead>
+                <tr>
+                    <th>Br</th>
+                    <th>Naziv</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="rented-body">
 
-        </div>
-       
-    </body>
+            </tbody>
+
+
+        </table>
+        <table id="available">           
+
+        </table>
+    </div>
+    <script src="mojeKnjige.js"></script>
+</body>
+
 </html>
