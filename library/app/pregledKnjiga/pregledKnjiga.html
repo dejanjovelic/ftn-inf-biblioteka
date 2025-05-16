@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../dist/contact/contact.css">
-    </head>
-    <body>
-        <nav class="navbar">
-            <h1 href="index.html" class="title">OnlineLib</h1>
-            <ul class="nav-links">
-                <li><a href="../contact/contact.html">Kontakt</a></li>
-                <li><a href="../mojeknjige/mojeKnjige.html">Moje knjige</a></li>
-                <li><b>Pregled knjiga</b></li>
-            </ul>
-        </nav>
-        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../dist/contact/contact.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 href="index.html" class="title">OnlineLib</h1>
+      <ul class="nav-links">
+        <li><a href="../contact/contact.html">Kontakt</a></li>
+        <li><a href="../mojeknjige/mojeKnjige.html">Moje knjige</a></li>
+        <li><b>Pregled knjiga</b></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <table id="view-table">
+        <tr>
+          <th>Br</th>
+          <th>Naziv</th>
+        </tr>
+      </table>
+      <div class="form">
+        <form id="bookForm">
+          <label for="name">Naziv</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="description">Opis</label>
+          <input type="text" id="description" name="description" required />
+          <br />
+          <label for="printDate">Godina stampanja</label>
+          <input type="number" id="printDate" name="printDate" required />
+          <br />
+          <label for="image">Link slike</label>
+          <input type="url" id="image" name="image" required />
+          <br />
+          <label for="stars">Popularnost</label>
+          <select name="stars" id="stars">
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+          </select>
+        </form>
+        <button type="button" id="button">Dodaj</button>
+      </div>
+    </div>
+    <script src="pregledKnjiga.js"></script>
+  </body>
 </html>
