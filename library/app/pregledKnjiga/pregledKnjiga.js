@@ -69,7 +69,7 @@ function addBook(books) {
     const id = maxID(books);
 
     if (name && description && printDate && url && stars && id) {
-      let newBook = new Book(id, name, printDate, url, stars);
+      let newBook = new Book(id, name, printDate, url, description, stars);
       books.push(newBook);
       localStorage.setItem("books", JSON.stringify(books));
       createBooksRows(books);
@@ -80,12 +80,12 @@ function addBook(books) {
 }
 
 function maxID(books) {
-  let id = 1;
+  let id = 0;
   for (let i = 0; i < books.length; i++) {
-    if (id <= books[i].id) {
-      id++;
+    if (id < books[i].id) {
+      id = books[i].id;
     }
   }
-  return id;
+  return id+1;
 }
 document.addEventListener("DOMContentLoaded", intializationBooks())
