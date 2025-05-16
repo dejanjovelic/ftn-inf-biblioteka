@@ -29,4 +29,37 @@ body {
   color: #0056b3;
 }
 
+.container-tables {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container-tables #rented, .container-tables #available {
+  border: 1px solid black;
+  margin-top: 30px;
+  width: 30%;
+  border-collapse: collapse;
+}
+.container-tables #rented th, .container-tables #available th {
+  border: 1px solid black;
+  background-color: lightgray;
+}
+.container-tables #rented td, .container-tables #available td {
+  border: 1px solid black;
+}
+.container-tables #rented td:nth-child(3), .container-tables #available td:nth-child(3) {
+  width: 25px;
+}
+.container-tables #available {
+  margin-left: 70px;
+}
+
+.headings {
+  display: flex;
+  margin-left: 540px;
+}
+.headings .heading2 {
+  margin-left: 500px;
+}
+
 /*# sourceMappingURL=mojeKnjige.css.map */

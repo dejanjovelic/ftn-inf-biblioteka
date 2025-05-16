@@ -1,1 +1,36 @@
 @use '../styles/global' as*;
+
+.container-tables {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    #rented,#available {
+        border: 1px solid black;
+        margin-top: 30px;
+        width: 30%;
+        border-collapse: collapse;
+        th {
+            border: 1px solid black;
+            background-color: lightgray;
+        }
+        td {
+            border: 1px solid black;
+            &:nth-child(3){
+                width: 25px;
+            }
+        }
+        tr {
+            
+        }
+    }
+    #available{
+        margin-left: 70px;
+    }
+}
+.headings {
+    display: flex;
+    margin-left: 540px;
+    .heading2 {
+        margin-left: 500px;
+    }
+}

@@ -91,13 +91,6 @@ function intializeRentedTable() {
     if (rentedStr) {
         rented = JSON.parse(rentedStr);
     }
-    else {
-        rented = [
-            new Book(0, "mobilni", "2022", "www.laguna.rs", "bla, bla", 5),
-            new Book(1, "Alhemicar", "2023", "www.laguna.rs", "nesto, nesto", 5)
-        ]
-        localStorage.setItem("rented", JSON.stringify(rented));
-    }
 
     createRentedRows();
     createAvailableRows();
