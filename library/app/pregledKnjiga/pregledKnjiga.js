@@ -71,6 +71,8 @@ function addBook(books) {
     if (name && description && printDate && url && stars && id) {
       let newBook = new Book(id, name, printDate, url, stars);
       books.push(newBook);
+      localStorage.setItem("books", JSON.stringify(books));
+      createBooksRows(books);
     } else {
       alert("Sva polja moraju biti popunjena.");
     }

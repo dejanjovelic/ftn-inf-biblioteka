@@ -1,1 +1,67 @@
 @use '../styles/global' as*;
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    .form {
+        display: flex;
+        flex-direction: column;       
+        margin-left: 40px;
+        width: 400px;
+        padding: 20px;
+
+        #bookForm {
+            
+            // padding: 10px;
+            
+
+           label,input,#stars {
+            
+           display: inline-block;
+            width: 45%;
+                
+            }
+            #stars {
+            
+           display: inline-block;
+            width: 25%;
+                
+            }
+        }
+
+    }
+    #button{
+    width: 20%;
+    align-self: flex-end;
+}
+}
+
+
+
+.form,
+#bookTable {
+    border: 1px solid black;
+}
+
+#bookTable {
+    border-collapse: collapse;
+    width: 300px;
+
+    td,
+    th {
+        border: 1px solid black;
+    }
+
+    th {
+
+        background-color: lightgray;
+    }
+
+    td {
+        &:nth-child(3) {
+            width: 40px;
+        }
+    }
+}

@@ -29,4 +29,49 @@ body {
   color: #0056b3;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.container .form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  width: 400px;
+  padding: 20px;
+}
+.container .form #bookForm label, .container .form #bookForm input, .container .form #bookForm #stars {
+  display: inline-block;
+  width: 45%;
+}
+.container .form #bookForm #stars {
+  display: inline-block;
+  width: 25%;
+}
+.container #button {
+  width: 20%;
+  align-self: flex-end;
+}
+
+.form,
+#bookTable {
+  border: 1px solid black;
+}
+
+#bookTable {
+  border-collapse: collapse;
+  width: 300px;
+}
+#bookTable td,
+#bookTable th {
+  border: 1px solid black;
+}
+#bookTable th {
+  background-color: lightgray;
+}
+#bookTable td:nth-child(3) {
+  width: 40px;
+}
+
 /*# sourceMappingURL=pregledKnjiga.css.map */
