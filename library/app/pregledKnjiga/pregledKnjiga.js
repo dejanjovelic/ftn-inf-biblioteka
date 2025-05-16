@@ -83,9 +83,9 @@ function maxID(books) {
   let id = 0;
   for (let i = 0; i < books.length; i++) {
     if (id < books[i].id) {
-      id++;
+      id = books[i].id;
     }
   }
-  return id;
+  return id+1;
 }
 document.addEventListener("DOMContentLoaded", intializationBooks())
